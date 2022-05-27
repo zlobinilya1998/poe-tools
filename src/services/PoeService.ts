@@ -1,7 +1,8 @@
 import Api from "./Api";
 
 export default class PoeService {
-    static async getInfo(){
-        return await Api.get('/leagues?type=main&compact=1');
+    static async getLeagues() {
+        const res = await Api.get('/leagues?type=main&compact=1');
+        return res.data;
     }
 }

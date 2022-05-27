@@ -1,6 +1,15 @@
 .data-table tr {
-  cursor: pointer;
+    cursor: pointer;
 }
-.data-table tr:hover {
-  outline: 1px solid black;
+
+.data-table {
+    background-color: hsla(210, 24%, 15%, 1);
+    color: white;
+}
+
+.row-name {
+    color: white;
+}
+.row-price {
+    color: white;
 }

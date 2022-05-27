@@ -1,22 +1,16 @@
-import React, {useState} from 'react';
 import './App.css';
-import PoeService from "./services/PoeService";
+import {Categories} from "./models/entities/League";
+import ItemsTable from "./components/shared/ItemsTable";
 
 function App() {
-  const [info,setInfo] = useState();
-
-  const getInfo = async() => {
-    const res = await PoeService.getInfo()
-  }
-
-
-
-
-  return (
-    <div className="App">
-      <button onClick={getInfo}>Get info</button>
-    </div>
-  );
+    return (
+        <div className="app">
+            <div className="app-container">
+                <div className="drawer">Navigation drawer</div>
+                <ItemsTable category={Categories.Fossil}/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
